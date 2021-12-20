@@ -1,0 +1,22 @@
+[
+  {
+    "lang": "zh-CN",
+    "leivii-block": {
+      "hide-text": "隐藏配置",
+      "show-text": "显示配置",
+      "run-text": "编辑器中打开",
+      "copy-text": "复制代码",
+      "copy-success": "复制成功"
+    }
+  },
+  {
+    "lang": "en-US",
+    "leivii-block": {
+      "hide-text": "Hide",
+      "show-text": "Expand",
+      "run-text": "Run In Editor",
+      "copy-text": "Copy",
+      "copy-success": "Successful"
+    }
+  }
+]
