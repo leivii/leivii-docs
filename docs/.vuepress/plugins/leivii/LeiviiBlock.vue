@@ -31,11 +31,11 @@
       </transition>
       <span class="run-action" @click.stop="runCode">{{ runText }}</span>
     </div>
-    <el-dialog title="提示" fullscreen show-close lock-scroll custom-class="leivii-editor-dialog" :visible.sync="dialogVisible">
+    <el-dialog fullscreen show-close lock-scroll custom-class="leivii-editor-dialog" :visible.sync="dialogVisible">
       <component v-if="dynamicComponent" :is="dynamicComponent" :data="editorData" @change="handleSave">
         <div slot="title">
-          <div class="back-button" @click="handleClose">
-            <i class="el-icon-back"></i> 返回
+          <div class="back-button fs-xl" @click="handleClose">
+            <i class="el-icon-back"></i> BACK
           </div>
         </div>
       </component>
@@ -48,6 +48,7 @@ import Vue from 'vue'
 import axios from '../../common/http'
 import i18n from '../../common/i18n'
 import store from '../../common/store'
+import { setupMock } from '../../common/mock'
 // import LeiviiEditor from 'leivii-editor'
 import defaultLang from './i18n/default_lang.json'
 
@@ -87,11 +88,11 @@ export default {
     },
     blockClass() {
       return `demo-${this.$lang} demo-${this.$router.currentRoute.path
-        .split("/")
+        .split('/')
         .pop()}`
     },
     iconClass() {
-      return this.isExpanded ? "caret-top" : "caret-bottom"
+      return this.isExpanded ? 'caret-top' : 'caret-bottom'
     },
     controlText() {
       return this.isExpanded ? this.langConfig['hide-text'] : this.langConfig['show-text']
@@ -100,17 +101,17 @@ export default {
       return this.langConfig['run-text']
     },
     codeArea() {
-      return this.$el.getElementsByClassName("meta")[0]
+      return this.$el.getElementsByClassName('meta')[0]
     },
     codeAreaHeight() {
-      // if (this.$el.getElementsByClassName("description").length > 0) {
+      // if (this.$el.getElementsByClassName('description').length > 0) {
       //   return (
-      //     this.$el.getElementsByClassName("description")[0].clientHeight +
-      //     this.$el.getElementsByClassName("code-content")[0].clientHeight +
+      //     this.$el.getElementsByClassName('description')[0].clientHeight +
+      //     this.$el.getElementsByClassName('code-content')[0].clientHeight +
       //     20
       //   )
       // }
-      return this.$el.getElementsByClassName("code-content")[0].clientHeight
+      return this.$el.getElementsByClassName('code-content')[0].clientHeight
     },
     hasRoot() {
       return this.data?.$type === 'geek-page'
@@ -127,10 +128,10 @@ export default {
   },
   watch: {
     isExpanded(val) {
-      this.codeArea.style.height = val ? `${this.codeAreaHeight + 1}px` : "0"
+      this.codeArea.style.height = val ? `${this.codeAreaHeight + 1}px` : '0'
       if (!val) {
         this.fixedControl = false
-        this.$refs.control.style.left = "0"
+        this.$refs.control.style.left = '0'
         this.removeScrollHandler()
         return
       }
@@ -143,6 +144,8 @@ export default {
     }
   },
   mounted() {
+    setupMock()
+
     import('leivii-editor').then(module => {
       Vue.use(module.default, {
         store,
@@ -151,12 +154,13 @@ export default {
       })
       this.dynamicComponent = 'leivii-editor'
     })
+  
     this.$nextTick(() => {
       let codeContent = this.$el.getElementsByClassName('code-content')[0]
       this.codeContentWidth = this.$el.offsetWidth
       if (this.$el.getElementsByClassName('description').length === 0) {
-        codeContent.style.width = "100%"
-        codeContent.borderRight = "none"
+        codeContent.style.width = '100%'
+        codeContent.borderRight = 'none'
       }
     })
   },
@@ -175,7 +179,7 @@ export default {
       this.fixedControl =
         bottom > document.documentElement.clientHeight &&
         top + 44 <= document.documentElement.clientHeight
-      this.$refs.control.style.left = this.fixedControl ? `${left}px` : "0"
+      this.$refs.control.style.left = this.fixedControl ? `${left}px` : '0'
     },
     removeScrollHandler() {
       this.scrollParent &&

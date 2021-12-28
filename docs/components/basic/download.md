@@ -24,7 +24,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small'
     },
     {
@@ -35,7 +35,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'success',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small'
     },
     {
@@ -46,7 +46,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'warning',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small'
     },
     {
@@ -57,7 +57,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'danger',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small'
     },
     {
@@ -68,7 +68,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'info',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small'
     },
     {
@@ -79,7 +79,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'text',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small'
     }
   ],
@@ -110,7 +110,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'mini'
     },
     {
@@ -121,7 +121,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small'
     },
     {
@@ -132,7 +132,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'medium'
     }
   ],
@@ -238,7 +238,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': '',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small',
       'child': {
         '$id': 'geek-image-N5bLfdIExCdi',
@@ -257,7 +257,7 @@ title: 下载
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/downLoad',
       'size': 'small',
       'child': {
         '$id': 'geek-container-PdLIf1BzpalU',

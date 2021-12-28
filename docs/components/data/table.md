@@ -58,7 +58,7 @@ title: 表格
             "cache": false,
             "root": "data.recordList",
             "method": "GET",
-            "api": "http://rap2api.taobao.org/app/mock/295925/beetle/api/coreresource/auth/user/pageQuery/v1",
+            "api": "/coreresource/auth/user/pageQuery/v1",
             "params": {
                 "type": "custom",
                 "target": "",
@@ -142,7 +142,7 @@ title: 表格
             "cache": false,
             "root": "data",
             "method": "GET",
-            "api": "http://rap2api.taobao.org/app/mock/295925/beetle/api/coreresource/auth/user/pageQuery/v1",
+            "api": "/coreresource/auth/user/pageQuery/v1",
             "params": {
                 "type": "objectMerge",
                 "target": "",
@@ -301,7 +301,7 @@ title: 表格
             "cache": false,
             "root": "data.recordList",
             "method": "GET",
-            "api": "http://rap2api.taobao.org/app/mock/295925/beetle/api/coreresource/auth/user/pageQuery/v1",
+            "api": "/coreresource/auth/user/pageQuery/v1",
             "params": {
                 "type": "custom",
                 "target": "",
@@ -425,7 +425,7 @@ title: 表格
             "cache": false,
             "root": "data.baseStationPriorities",
             "method": "GET",
-            "api": "http://rap2api.taobao.org/app/mock/295925/beetle/api_v1/stationConfigController/queryBaseStationPriorityRuleByRuleId",
+            "api": "/stationConfigController/queryBaseStationPriorityRuleByRuleId",
             "params": {
                 "type": "custom",
                 "target": "",
@@ -526,7 +526,7 @@ title: 表格
             "cache": false,
             "root": "data.recordList",
             "method": "GET",
-            "api": "http://rap2api.taobao.org/app/mock/295925/beetle/api/coreresource/auth/user/pageQuery/v1",
+            "api": "/coreresource/auth/user/pageQuery/v1",
             "params": {
                 "type": "custom",
                 "target": "",

@@ -24,7 +24,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small'
     },
     {
@@ -35,7 +35,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'success',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small'
     },
     {
@@ -46,7 +46,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'warning',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small'
     },
     {
@@ -57,7 +57,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'danger',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small'
     },
     {
@@ -68,7 +68,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'info',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small'
     },
     {
@@ -79,7 +79,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'text',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small'
     }
   ],
@@ -110,7 +110,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'mini'
     },
     {
@@ -121,7 +121,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small'
     },
     {
@@ -132,7 +132,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'medium'
     }
   ],
@@ -163,7 +163,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small',
       'accept': '.png'
     },
@@ -175,7 +175,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small',
       'accept': '.doc'
     }
@@ -209,7 +209,7 @@ title: 上传
           'text': '上传',
           'disabled': null,
           'size': 'small',
-          'customUpload': `(data, key) => {\n  let formdata = new FormData()\n  formdata.append('myfile', data.file)\n  this.$axios({\n    url: 'http://rap2api.taobao.org/app/mock/272877/api/upload?parseXMLName=asnExcelImport.xml',\n    method: 'POST',\n    data: formdata\n  })\n}`
+          'customUpload': `(data, key) => {\n  let formdata = new FormData()\n  formdata.append('myfile', data.file)\n  this.$axios({\n    url: '/test/upload?parseXMLName=asnExcelImport.xml',\n    method: 'POST',\n    data: formdata\n  })\n}`
       }
   ],
   'grids': [],
@@ -239,7 +239,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': '',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small',
       'accept': '.png',
       'child': {
@@ -259,7 +259,7 @@ title: 上传
       '$classes': null,
       'disabled': null,
       'type': 'primary',
-      'url': 'test/upload',
+      'url': '/test/upload',
       'size': 'small',
       'accept': '.doc',
       'child': {

@@ -18,9 +18,10 @@ module.exports = (options = {}, ctx) => {
             const description = m && m.length > 1 ? m[1] : ''
             const content = encodeURI(tokens[idx + 1].content)
             return `<leivii-block content="${content}" :options="${JSON.stringify(options)}">
-              ${description ? `<div slot="description">${md.render(description).html}</div>` : ''}`;
+              ${description ? `<div slot="description">${md.render(description).html}</div>` : ''}
+              <template slot="source">`
           }
-          return `</leivii-block>`;
+          return `</template></leivii-block>`;
         }
       }).use(mdContainer, 'img', {
         validate(params) {
@@ -33,7 +34,7 @@ module.exports = (options = {}, ctx) => {
             const content = tokens[idx + 2].content
             return `<leivii-img><template slot="img">${md.render(`<img src="${content}" alt="${description}" />`).html}</template>`;
           }
-          return `</leivii-img>`;
+          return `</leivii-img>`
         }
       }).use(mdContainer, 'video', {
         validate(params) {
@@ -57,7 +58,7 @@ module.exports = (options = {}, ctx) => {
             let videoProperties = Object.entries(options).map(([key, val]) => `${key}="${val}"`).join(' ')
             return `<leivii-video><template slot="video">${md.render(`<video src="${content}" ${videoProperties} />`).html}</template>`;
           }
-          return `</leivii-video>`;
+          return `</leivii-video>`
         }
       })
     }

@@ -125,7 +125,7 @@ interface PropOptions<T=any> {
   /** 值的可选项 */
   options?: SelectOptions[]
   /** 显示条件表达式，如 '{{type}} = dict' */
-  boolean?: boolean
+  visible?: boolean
   /** 指定属性编辑类 */
   clazz?: string | object
   /** 指定数组元素编辑类 */

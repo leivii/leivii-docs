@@ -245,7 +245,7 @@ title: 对话框
                                     "cache": false,
                                     "root": "data.baseStationPriorities",
                                     "method": "GET",
-                                    "api": "http://rap2api.taobao.org/app/mock/295925/beetle/api_v1/stationConfigController/queryBaseStationPriorityRuleByRuleId",
+                                    "api": "/stationConfigController/queryBaseStationPriorityRuleByRuleId",
                                     "params": {
                                         "type": "custom",
                                         "target": "",

@@ -71,7 +71,16 @@ const store = new Vuex.Store({
 Vue.use(LeiviiEditor, {
   store, // 编辑器使用 store 注册状态模块
   i18n: (...args) => i18n.t(...args), // 国际化函数
-  fetch: { axios } // 请求库
+  fetch: { axios }, // 请求库，支持REST：fetch: { GET, POST, PUT, DELETE }
+  debug: false, // 打开日志
+  dict: { // 字典接口配置
+    url: '/api_v1/dict/batchQuery',
+    method: 'post',
+    key: 'objectCodes', // 请求key字段
+    root: 'details', // 返回值列表字段
+    label: 'fieldValue', // 显示字段
+    value: 'fieldCode' // 值字段
+  }
 })
 ```
 
@@ -140,6 +149,7 @@ const i18n = new VueI18n({
 
 Vue.use(Leivii, {
   i18n: (...args) => i18n.t(...args),
-  fetch: { axios }
+  fetch: { axios },
+  debug: true // 打开日志
 })
 ```

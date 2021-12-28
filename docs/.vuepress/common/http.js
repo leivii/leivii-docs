@@ -2,6 +2,7 @@ import axios from 'axios'
 import { Message } from 'element-ui'
 import { transMsg } from 'leivii'
 import { debounce } from 'throttle-debounce'
+import './mock.js'
 
 const goLogin = debounce(200, error => {
   // if (location.hash.startsWith('#/login')) return
@@ -15,7 +16,7 @@ const goLogin = debounce(200, error => {
 })
 
 axios.defaults.timeout = 360000
-axios.defaults.baseURL = 'http://rap2api.taobao.org/app/mock/272877/leto-wes'
+// axios.defaults.baseURL = 'http://rap2api.taobao.org/app/mock/272877/leto-wes'
 axios.defaults.withCredentials = true
 
 
@@ -37,6 +38,15 @@ axios.interceptors.request.use(
 // http response 拦截器
 axios.interceptors.response.use(
   (response) => {
+    // console.table([{ URL: response.config.url, METHOD: response.config.method, RESPONSE: response.data }])
+    console.group('Mock', response.config.url)
+    console.log('%cRequest URL:', 'font-weight: bold', response.config.url)
+    console.log('%cRequest Method:', 'font-weight: bold', response.config.method.toUpperCase())
+    response.config.params && Object.keys(response.config.params).length && console.log('%cQuery Parameters:', 'font-weight: bold', response.config.params)
+    response.config.data && console.log('%cRequest Payload:', 'font-weight: bold', JSON.parse(response.config.data))
+    console.log('%cResponse:', 'font-weight: bold', response.data)
+    console.groupEnd()
+
     if ([2, 3].includes(response.data.code)) {
       const params = location.hash
       // eslint-disable-next-line

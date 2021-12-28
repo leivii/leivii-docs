@@ -245,7 +245,7 @@ Drawer 拥有和 drawer 几乎相同的 API, 在 UI 上带来不一样的体验.
                                     "cache": false,
                                     "root": "data.baseStationPriorities",
                                     "method": "GET",
-                                    "api": "http://rap2api.taobao.org/app/mock/295925/beetle/api_v1/stationConfigController/queryBaseStationPriorityRuleByRuleId",
+                                    "api": "/stationConfigController/queryBaseStationPriorityRuleByRuleId",
                                     "params": {
                                         "type": "custom",
                                         "target": "",

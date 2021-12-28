@@ -9,7 +9,7 @@ sidebarDepth: 1
 
 Leivii 是一个专注于前端低代码的在线IDE。与其他流行的表单/大屏/工作流低代码不同的是，Leivii被设计为二次开发友好的通用框架。Leivii抽象简单，不仅易于上手，还便于与第三方库或既有项目整合；另一方面，借助组件交互处理器的设计，用户可以像做游戏一样，实现复杂的应用交互。
 
-如果你想在深入学习 Leivii 之前对它有更多了解，我们制作了一个视频，带您了解其核心概念和一个示例页面。
+如果你想在深入学习 Leivii 之前对它有更多了解，我们制作了一个视频，带您了解其核心概念。
 
 ::: video controls preload width=600 poster=./assets/img/poster.png
 ./assets/video/leivii.mp4
@@ -19,7 +19,6 @@ Leivii 是一个专注于前端低代码的在线IDE。与其他流行的表单/
 Leivii，读作“雷卫”，来自《星辰变》
 :::
 
- TODO 编辑器使用介绍
 ## 起步
 
 <a class="button" href="install.html">安装</a>
@@ -29,10 +28,9 @@ Leivii，读作“雷卫”，来自《星辰变》
 ::: leivii
 ```js
 {
-  $id: 'geek-text',
-  $type: 'geek-text',
-  $visible: true,
-  text: 'Hello World'
+  "$id": "geek-text",
+  "$type": "geek-text",
+  "text": "Hello World"
 }
 ```
 :::
