@@ -5524,10 +5524,10 @@ latest-version@^5.0.0:
   dependencies:
     package-json "^6.3.0"
 
-leivii-editor@^0.1.12:
-  version "0.1.12"
-  resolved "https://registry.yarnpkg.com/leivii-editor/-/leivii-editor-0.1.12.tgz#452ac820b7455de642802868935759ccb3a6842f"
-  integrity sha512-AwwxXSRBhJVG38YhHM0/beKQ5OYukfnoPAmt9pPL4GGqBM9U8ai+hLDu0iaHPSXx9NvFCW7hFC4VdMrCzgUSKQ==
+leivii-editor@^0.1.13:
+  version "0.1.13"
+  resolved "https://registry.yarnpkg.com/leivii-editor/-/leivii-editor-0.1.13.tgz#93584346db66e4180ddbb8613218ed134cd6496d"
+  integrity sha512-PQv8In2KtsEBRjHhXeXyfUhEgGq13DeaQai+5Qme7arC1WKvdxYgUk038aQHv/MOBYetZEiMsswTwm0AIfWF0w==
   dependencies:
     clipboard-polyfill "^3.0.3"
     codemirror "^5.58.0"
@@ -5535,10 +5535,10 @@ leivii-editor@^0.1.12:
     vuedraggable "^2.24.3"
     xlsx "^0.17.2"
 
-leivii@^1.2.10:
-  version "1.2.10"
-  resolved "https://registry.yarnpkg.com/leivii/-/leivii-1.2.10.tgz#9fe091930dd17264d9cc13e62a96a6dbdfedbadd"
-  integrity sha512-yzLtKjItnos914pcbt2boMvRX9r4sX9iWZc5nSxvxPlvscbHlRiHXh5e9UtdeWCsB187Vnu1jkjN0ZFxhynosw==
+leivii@^1.2.11:
+  version "1.2.11"
+  resolved "https://registry.yarnpkg.com/leivii/-/leivii-1.2.11.tgz#77d316d7f07772055a9a2ee686913440c19321c5"
+  integrity sha512-XyNEGd5yaglVKgDPzY6q1T8lSnVvnnvo8GhLRFacYdr2HnNCJI610puUtx3S/d/chdS5uW6FMJFoD6AEHqJxEg==
   dependencies:
     throttle-debounce "^3.0.1"
     xlsx "^0.17.2"

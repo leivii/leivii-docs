@@ -243,12 +243,13 @@ module.exports = {
     },
     smoothScroll: true,
     displayAllHeaders: true,
-    repo: 'http://gitlab.geekplus.cc/fe/leivii-docs',
+    // repo: 'http://gitlab.geekplus.cc/fe/leivii-docs',
+    repo: 'https://github.com/leivii/leivii-docs',
+    docsRepo: 'leivii/leivii-docs',
     repoLabel: 'GitHub',
     docsDir: 'docs',
     docsBranch: 'master',
-    editLinks: true,
-    editReplace: '/docs/2/'
+    editLinks: true
   },
   markdown: {
     lineNumbers: true,

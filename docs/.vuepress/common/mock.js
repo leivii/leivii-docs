@@ -12,23 +12,23 @@ export const setupMock = () => {
 
 Mock.mock(/\/api\/tablelist/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data|15-25": [
     {
       "warehouseCode": "@word(10, 15)",
-      "warehouseName": "@ctitle",
+      "warehouseName": "@title",
       "workareaCode": "@word(10, 15)",
-      "workareaName": "@ctitle",
+      "workareaName": "@title",
       "status": "@pick([1,0])",
       "creationDate": "@date(T)",
-      "creator": "@cname"
+      "creator": "@name"
     }
   ]
 })
 
 Mock.mock(/\/api\/form/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data": {
     "item1": "@word",
     "item2": "@word",
@@ -38,29 +38,29 @@ Mock.mock(/\/api\/form/, 'get', {
 
 Mock.mock(/\/api\/warehouselist/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data|5-10": [
     {
       "id|+1": 9,
       "warehouseCode": "@uuid",
-      "warehouseName": "@ctitle"
+      "warehouseName": "@title"
     }
   ]
 })
 
 Mock.mock(/\/api\/tablepaginglist/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data": {
     "list|10": [
       {
         "warehouseCode": "@word(10, 15)",
-        "warehouseName": "@ctitle",
+        "warehouseName": "@title",
         "workareaCode": "@word(10, 15)",
-        "workareaName": "@ctitle",
+        "workareaName": "@title",
         "status": "@pick([1,0])",
         "creationDate": "@date(T)",
-        "creator": "@cname"
+        "creator": "@name"
       }
     ],
     "total": 100
@@ -69,7 +69,7 @@ Mock.mock(/\/api\/tablepaginglist/, 'get', {
 
 Mock.mock(/\/api\/provinces/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data|10": [
     {
       "code": "@word",
@@ -80,7 +80,7 @@ Mock.mock(/\/api\/provinces/, 'get', {
 
 Mock.mock(/\/api\/cities/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data|10": [
     {
       "code": "@word",
@@ -112,16 +112,16 @@ Mock.mock(/\/api_v1\/dict\/batchQuery/, 'post', {
 
 Mock.mock(/\/api\/users/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data": {
     "total": 100,
     "list|10": [
       {
         "id": "@id",
-        "name": "@cname",
-        "role": "@ctitle",
+        "name": "@name",
+        "role": "@title",
         "createTime": "@date",
-        "createBy": "@cname"
+        "createBy": "@name"
       }
     ]
   }
@@ -144,13 +144,13 @@ Mock.mock(/\/api\/users\/\d+/, 'delete', {
 
 Mock.mock(/\/api\/users\/\d+/, 'get', {
   "code": 0,
-  "msg": "@ctitle",
+  "msg": "@title",
   "data": {
     "id": "@id",
-    "name": "@cname",
-    "role": "@ctitle",
+    "name": "@name",
+    "role": "@title",
     "createTime": "@date",
-    "createBy": "@cname"
+    "createBy": "@name"
   }
 })
 

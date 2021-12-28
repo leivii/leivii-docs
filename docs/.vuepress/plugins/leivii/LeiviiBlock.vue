@@ -35,7 +35,7 @@
       <component v-if="dynamicComponent" :is="dynamicComponent" :data="editorData" @change="handleSave">
         <div slot="title">
           <div class="back-button fs-xl" @click="handleClose">
-            <i class="el-icon-back"></i> BACK
+            <i class="el-icon-back"></i> {{ $transMsg('lang.action.back') }}
           </div>
         </div>
       </component>
@@ -45,6 +45,7 @@
 
 <script type="text/babel">
 import Vue from 'vue'
+import Leivii from 'leivii'
 import axios from '../../common/http'
 import i18n from '../../common/i18n'
 import store from '../../common/store'
@@ -147,6 +148,9 @@ export default {
     setupMock()
 
     import('leivii-editor').then(module => {
+      i18n.locale = this.formatLangCode(this.$lang)
+      module.default.locale(this.$lang)
+
       Vue.use(module.default, {
         store,
         i18n: (...args) => i18n.t(...args),
@@ -168,6 +172,12 @@ export default {
     this.removeScrollHandler()
   },
   methods: {
+    formatLangCode(code = 'cn') {
+      code = code.toLowerCase()
+      if (code.indexOf('cn') > -1) return 'cn'
+      if (code.indexOf('en') > -1) return 'en'
+      return code
+    },
     runCode() {
       this.$store.commit('leivii/SET_MODE', 1)
       this.$store.commit('leivii/SET_PAGE_CONFIG', JSON.parse(JSON.stringify(this.editorData)))
