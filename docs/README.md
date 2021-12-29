@@ -1,6 +1,11 @@
 ---
 title: 介绍
 sidebarDepth: 1
+meta:
+  - name: description
+    content: leivii 低代码编辑器, 页面拖拽, 可视化, Low Code, Low-Code, 雷卫
+  - name: keywords
+    content: Leivii 低代码编辑器 雷卫
 ---
 
 # 介绍

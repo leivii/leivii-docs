@@ -295,12 +295,17 @@ module.exports = {
     config.resolve.alias.set('@assets', './assets');
   },
   plugins: [
-    {
-      '@vuepress/pwa': {
-        serviceWorker: true,
-        updatePopup: true
-      }
-    },
+    ['@vuepress/pwa', {
+      serviceWorker: true,
+      updatePopup: true
+    }],
+    ['autometa', {
+      site: {
+        name: 'leivii',
+      },
+      canonical_base: 'https://leivii.github.io',
+    }],
+    ['vuepress-plugin-baidu-autopush'],
     ['./docs/.vuepress/plugins/leivii/index.js']
   ]
 }

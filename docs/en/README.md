@@ -1,6 +1,11 @@
 ---
 title: Quick Start
 sidebarDepth: 1
+meta:
+  - name: description
+    content: leivii editor, draggable, visible, Low Code, Low-Code
+  - name: keywords
+    content: Leivii
 ---
 
 # Quick Start
