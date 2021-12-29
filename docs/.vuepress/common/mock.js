@@ -10,15 +10,15 @@ export const setupMock = () => {
   })
 }
 
-Mock.mock(/\/api\/tablelist/, 'get', {
+Mock.mock(/^\/api\/tablelist/, 'get', {
   "code": 0,
   "msg": "@title",
   "data|15-25": [
     {
       "warehouseCode": "@word(10, 15)",
-      "warehouseName": "@title",
+      "warehouseName": "@title(3)",
       "workareaCode": "@word(10, 15)",
-      "workareaName": "@title",
+      "workareaName": "@title(2)",
       "status": "@pick([1,0])",
       "creationDate": "@date(T)",
       "creator": "@name"
@@ -26,7 +26,7 @@ Mock.mock(/\/api\/tablelist/, 'get', {
   ]
 })
 
-Mock.mock(/\/api\/form/, 'get', {
+Mock.mock(/^\/api\/form/, 'get', {
   "code": 0,
   "msg": "@title",
   "data": {
@@ -36,7 +36,7 @@ Mock.mock(/\/api\/form/, 'get', {
   }
 })
 
-Mock.mock(/\/api\/warehouselist/, 'get', {
+Mock.mock(/^\/api\/warehouselist/, 'get', {
   "code": 0,
   "msg": "@title",
   "data|5-10": [
@@ -48,7 +48,7 @@ Mock.mock(/\/api\/warehouselist/, 'get', {
   ]
 })
 
-Mock.mock(/\/api\/tablepaginglist/, 'get', {
+Mock.mock(/^\/api\/tablepaginglist/, 'get', {
   "code": 0,
   "msg": "@title",
   "data": {
@@ -67,7 +67,7 @@ Mock.mock(/\/api\/tablepaginglist/, 'get', {
   }
 })
 
-Mock.mock(/\/api\/provinces/, 'get', {
+Mock.mock(/^\/api\/provinces/, 'get', {
   "code": 0,
   "msg": "@title",
   "data|10": [
@@ -78,7 +78,7 @@ Mock.mock(/\/api\/provinces/, 'get', {
   ]
 })
 
-Mock.mock(/\/api\/cities/, 'get', {
+Mock.mock(/^\/api\/cities/, 'get', {
   "code": 0,
   "msg": "@title",
   "data|10": [
@@ -89,7 +89,7 @@ Mock.mock(/\/api\/cities/, 'get', {
   ]
 })
 
-Mock.mock(/\/api_v1\/dict\/batchQuery/, 'post', {
+Mock.mock(/^\/api_v1\/dict\/batchQuery/, 'post', {
   "data": {
     "status": {
       "details|2": [
@@ -110,7 +110,7 @@ Mock.mock(/\/api_v1\/dict\/batchQuery/, 'post', {
   "msg": "success"
 })
 
-Mock.mock(/\/api\/users/, 'get', {
+Mock.mock(/^\/api\/users/, 'get', {
   "code": 0,
   "msg": "@title",
   "data": {
@@ -127,22 +127,22 @@ Mock.mock(/\/api\/users/, 'get', {
   }
 })
 
-Mock.mock(/\/api\/users/, 'post', {
+Mock.mock(/^\/api\/users/, 'post', {
   "code": 0,
   "msg": "创建成功！"
 })
 
-Mock.mock(/\/api\/users\/\d+/, 'put', {
+Mock.mock(/^\/api\/users\/\d+/, 'put', {
   "code": 0,
   "msg": "修改成功！"
 })
 
-Mock.mock(/\/api\/users\/\d+/, 'delete', {
+Mock.mock(/^\/api\/users\/\d+/, 'delete', {
   "code": 0,
   "msg": "删除成功！"
 })
 
-Mock.mock(/\/api\/users\/\d+/, 'get', {
+Mock.mock(/^\/api\/users\/\d+/, 'get', {
   "code": 0,
   "msg": "@title",
   "data": {
@@ -155,7 +155,7 @@ Mock.mock(/\/api\/users\/\d+/, 'get', {
 })
 
 //规则列表
-Mock.mock(/\/stationConfigController\/queryBaseStationPriorityRuleByRuleId\/\d+/, 'get', {
+Mock.mock(/^\/stationConfigController\/queryBaseStationPriorityRuleByRuleId\/\d+/, 'get', {
   "code": 0,
   "msg": "success",
   "data": {
@@ -223,7 +223,7 @@ Mock.mock(/\/stationConfigController\/queryBaseStationPriorityRuleByRuleId\/\d+/
 })
 
 //用户列表
-Mock.mock(/\/coreresource\/auth\/user\/pageQuery\/v1\/\d+/, 'get', {
+Mock.mock(/^\/coreresource\/auth\/user\/pageQuery\/v1\/\d+/, 'get', {
   "code": 0,
   "msg": "{\"c\":\"lang.btc.common.util.apiresult.success\"}",
   "data": {
@@ -362,7 +362,7 @@ Mock.mock(/\/coreresource\/auth\/user\/pageQuery\/v1\/\d+/, 'get', {
 })
 
 //树列表
-Mock.mock(/\/waresType\/queryTreeWaresTypeList\/\d+/, 'get', {
+Mock.mock(/^\/waresType\/queryTreeWaresTypeList\/\d+/, 'get', {
   "code": 0,
   "msg": "success",
   "data|7": [

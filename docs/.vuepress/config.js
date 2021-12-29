@@ -21,11 +21,25 @@ module.exports = {
     logo: '/logo.png',
     locales: {
       '/': {
-        selectText: '选择语言',
+        selectText: '语言',
         label: '简体中文',
         nav: [
-          { text: 'API', link: '/api' }
+          { text: 'API', link: '/api' },
+          { text: '演练场', link: '/playground' },
+          {
+            text: '加入我们',
+            items: [
+              { text: '关注', link: 'https://github.com/leivii/leivii.github.io' },
+              { text: '关于', link: '/join' }
+            ]
+          }
         ],
+        serviceWorker: {
+          updatePopup: {
+            message: '内容有更新',
+            buttonText: '刷新'
+          }
+        },
         sidebarDepth: 0,
         sidebar: [
           '/',
@@ -134,105 +148,119 @@ module.exports = {
         selectText: 'Languages',
         label: 'English',
         nav: [
-          { text: 'API', link: '/en/api' }
+          { text: 'API', link: '/en/api' },
+          { text: 'Playground', link: '/en/playground' },
+          {
+            text: 'Join us',
+            items: [
+              { text: 'Follow', link: 'https://github.com/leivii/leivii.github.io' },
+              { text: 'About', link: '/en/join' }
+            ]
+          }
         ],
+        serviceWorker: {
+          updatePopup: {
+            message: 'New content is available!',
+            buttonText: 'Refresh'
+          }
+        },
         sidebarDepth: 0,
         sidebar: [
           '/en/',
           '/en/install',
           {
             title: 'Components',
-            // path: '/components/',
+            // path: '/en/components/',
             collapsable: true,
             children: [
-              '/components/leivii',
+              '/en/components/leivii',
               {
-                title: '基础',
+                title: 'Basic',
                 collapsable: false,
                 sidebarDepth: 0
               },
-              '/components/basic/button',
-              '/components/basic/link',
-              '/components/basic/icon',
-              '/components/basic/text',
-              '/components/basic/img',
-              '/components/basic/placeholder',
-              '/components/basic/upload',
-              '/components/basic/download',
-              // '/components/basic/alert',
+              '/en/components/basic/button',
+              '/en/components/basic/link',
+              '/en/components/basic/icon',
+              '/en/components/basic/text',
+              '/en/components/basic/img',
+              '/en/components/basic/placeholder',
+              '/en/components/basic/upload',
+              '/en/components/basic/download',
+              // '/en/components/basic/alert',
               {
-                title: '表单',
+                title: 'Form',
                 collapsable: false,
                 sidebarDepth: 0
               },
-              '/components/form/input',
-              '/components/form/input-number',
-              '/components/form/select',
-              '/components/form/radio',
-              '/components/form/checkbox',
-              '/components/form/switch',
-              '/components/form/date-picker',
-              '/components/form/time-picker',
-              '/components/form/transfer',
-              '/components/form/transfer-table',
-              '/components/form/text',
-              '/components/form/hidden',
-              '/components/form/form',
+              '/en/components/form/input',
+              '/en/components/form/input-number',
+              '/en/components/form/select',
+              '/en/components/form/radio',
+              '/en/components/form/checkbox',
+              '/en/components/form/switch',
+              '/en/components/form/date-picker',
+              '/en/components/form/time-picker',
+              '/en/components/form/transfer',
+              '/en/components/form/transfer-table',
+              '/en/components/form/text',
+              '/en/components/form/hidden',
+              '/en/components/form/form',
               {
-                title: '容器',
+                title: 'Container',
                 collapsable: false,
                 sidebarDepth: 0
               },
-              '/components/container/page',
-              '/components/container/container',
-              '/components/container/flex-container',
-              '/components/container/dialog',
-              '/components/container/drawer',
-              '/components/container/panel',
-              '/components/container/search-bar',
-              '/components/container/tab',
-              // '/components/container/collapse',
-              '/components/container/list',
+              '/en/components/container/page',
+              '/en/components/container/container',
+              '/en/components/container/flex-container',
+              '/en/components/container/dialog',
+              '/en/components/container/drawer',
+              '/en/components/container/panel',
+              '/en/components/container/search-bar',
+              '/en/components/container/tab',
+              // '/en/components/container/collapse',
+              '/en/components/container/list',
               {
-                title: '数据',
+                title: 'Data',
                 collapsable: false,
                 sidebarDepth: 0
               },
-              '/components/data/table',
-              '/components/data/tree',
+              '/en/components/data/table',
+              '/en/components/data/tree',
               {
-                title: '其他',
+                title: 'Others',
                 collapsable: false,
                 sidebarDepth: 0
               },
-              '/components/others/webview'
+              '/en/components/others/webview'
             ]
           },
           {
             title: 'Design',
-            // path: '/design/',
+            // path: '/en/design/',
             collapsable: true,
             children: [
-              '/design/dsl',
-              '/design/datasource',
-              '/design/handler',
-              '/design/scf',
-              '/design/expression',
-              '/design/editor'
+              '/en/design/dsl',
+              '/en/design/datasource',
+              '/en/design/handler',
+              '/en/design/scf',
+              '/en/design/expression',
+              '/en/design/editor'
             ]
           },
           {
             title: 'Advanced',
-            // path: '/advanced/',
+            // path: '/en/advanced/',
             collapsable: true,
             children: [
-              '/advanced/component',
-              '/advanced/doc',
-              '/advanced/prop',
-              '/advanced/validator',
-              '/advanced/props',
-              '/advanced/auth',
-              '/advanced/plugin'
+              '/en/advanced/component',
+              '/en/advanced/doc',
+              '/en/advanced/prop',
+              '/en/advanced/validator',
+              '/en/advanced/props',
+              '/en/advanced/auth',
+              '/en/advanced/plugin'
             ]
           },
         ],
@@ -246,7 +274,7 @@ module.exports = {
     // repo: 'http://gitlab.geekplus.cc/fe/leivii-docs',
     repo: 'https://github.com/leivii/leivii-docs',
     docsRepo: 'leivii/leivii-docs',
-    repoLabel: 'GitHub',
+    repoLabel: '贡献文档',
     docsDir: 'docs',
     docsBranch: 'master',
     editLinks: true
@@ -267,6 +295,12 @@ module.exports = {
     config.resolve.alias.set('@assets', './assets');
   },
   plugins: [
+    {
+      '@vuepress/pwa': {
+        serviceWorker: true,
+        updatePopup: true
+      }
+    },
     ['./docs/.vuepress/plugins/leivii/index.js']
   ]
 }

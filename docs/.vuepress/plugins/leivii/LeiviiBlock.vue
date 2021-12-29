@@ -47,7 +47,7 @@
 import Vue from 'vue'
 import Leivii from 'leivii'
 import axios from '../../common/http'
-import i18n from '../../common/i18n'
+import i18n, { messages } from '../../common/i18n'
 import store from '../../common/store'
 import { setupMock } from '../../common/mock'
 // import LeiviiEditor from 'leivii-editor'
@@ -149,7 +149,7 @@ export default {
 
     import('leivii-editor').then(module => {
       i18n.locale = this.formatLangCode(this.$lang)
-      module.default.locale(this.$lang)
+      module.default.locale(this.$lang, messages[i18n.locale])
 
       Vue.use(module.default, {
         store,
