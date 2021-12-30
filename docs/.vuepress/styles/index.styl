@@ -28,6 +28,17 @@
   }
   .theme-default-content {
     padding: 2rem 4rem;
+    overflow-x: hidden;
+    @media (max-width: 959px) {
+      &.theme-default-content:not(.custom) {
+        padding: 2rem;
+      }
+    }
+    @media (max-width: 419px) {
+      &.theme-default-content:not(.custom) {
+        padding: 1.5rem;
+      }
+    }
     .custom-block.tip {
       .line-numbers-mode {
         .language-js, .language-ts {

@@ -69,6 +69,18 @@ export default {
   transition: all .3s ease .2s;
   z-index: 9;
 }
+@media (max-width: 959px) {
+  .leivii-img img {
+    transition: none;
+    width: 100% !important;
+  }
+}
+@media (max-width: 419px) {
+  .leivii-img img {
+    transition: none;
+    width: 100% !important;
+  }
+}
 .leivii-img img:hover {
   box-shadow: 2px 2px 5px #ddd;
   z-index: 10;
